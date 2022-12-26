@@ -25,10 +25,7 @@ namespace TelefonRehberi
 
         public Kisiler()
         {
-            //if (Ad == null || Soyad == null || Numara == null)
-            //{
-            //    Console.WriteLine("Eksik Bilgi girdiniz");
-            //}
+           
         }
         
         

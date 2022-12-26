@@ -8,12 +8,13 @@ namespace TelefonRehberi
 {
     public class Islemler : Kisiler
     {
+       // Dictionary<int, Kisiler> KisilerListesi = new Dictionary<int, Kisiler>();
         List<Kisiler> KisilerListesi = new List<Kisiler>();
         Kisiler KisilerGetir = new Kisiler();
 
         public void KisiBilgileriniGetir()
         {
-            foreach (Kisiler item in KisilerListesi)
+            foreach (var item in KisilerListesi)
             {
                 Console.WriteLine("Kişi Bilgileri");
                 Console.WriteLine("Adı   : {0}", item.Ad);
@@ -33,6 +34,7 @@ namespace TelefonRehberi
                 Console.WriteLine("1.Numara Kayıt");
                 Console.WriteLine("2.Kişi bilgilerini göster");
                 Console.WriteLine("3.Numara Silme");
+                Console.WriteLine("4.Kişi Arama");
                 int secenek = Convert.ToInt32(Console.ReadLine());
                 if (secenek == 1)
                 {
@@ -48,6 +50,10 @@ namespace TelefonRehberi
                 {
                     NumaraSil();
                 }
+                else if (secenek==4)
+                {
+                    Arama();
+                }
             }
            
         }
@@ -58,7 +64,10 @@ namespace TelefonRehberi
             KisilerGetir.Ad = Console.ReadLine();
             KisilerGetir.Soyad = Console.ReadLine();
             KisilerGetir.Numara = Convert.ToInt32(Console.ReadLine());
+            
             KisilerListesi.Add(KisilerGetir);
+            
+            
 
 
         }
@@ -81,7 +90,14 @@ namespace TelefonRehberi
         }
         public void Arama()
         {
-           
+            Console.WriteLine("Aramak istediğiniz kişinin adını yazınız");
+            string ara = Console.ReadLine();
+            foreach (var item in KisilerListesi)
+            {
+               
+                Console.WriteLine(item.Ad.Contains(ara));
+            }
+            
 
         }
     }
