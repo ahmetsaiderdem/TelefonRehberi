@@ -11,7 +11,8 @@ namespace TelefonRehberi
         private string ad;
         private string soyad;
         private int numara;
-
+        
+      
         public string Ad { get => ad; set => ad = value; }
         public string Soyad { get => soyad; set => soyad = value; }
         public int Numara { get => numara; set => numara = value; }
@@ -21,14 +22,18 @@ namespace TelefonRehberi
             Soyad = soyad;
             Numara = numara;
         }
+
         public Kisiler()
         {
-            if (Ad==null || Soyad==null || Numara==null)
-            {
-                Console.WriteLine("Eksik Bilgi girdiniz");
-            }
+            //if (Ad == null || Soyad == null || Numara == null)
+            //{
+            //    Console.WriteLine("Eksik Bilgi girdiniz");
+            //}
         }
-
+        
+        
+        
 
     }
+   
 }

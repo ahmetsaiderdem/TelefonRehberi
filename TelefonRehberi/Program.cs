@@ -3,13 +3,17 @@ using System.Collections.Generic;
 
 namespace TelefonRehberi
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            
-            
 
+            
+            Islemler getirKisi = new Islemler();
+              getirKisi.Secenek();
+               
+            
+            
         }
 
 
@@ -17,7 +21,7 @@ namespace TelefonRehberi
 
     }
     
-   
+
 }
 
 
