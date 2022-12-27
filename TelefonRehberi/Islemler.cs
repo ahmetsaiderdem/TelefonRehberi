@@ -10,19 +10,20 @@ namespace TelefonRehberi
     {
        // Dictionary<int, Kisiler> KisilerListesi = new Dictionary<int, Kisiler>();
         List<Kisiler> KisilerListesi = new List<Kisiler>();
-        Kisiler KisilerGetir = new Kisiler();
-
+        
+        
         public void KisiBilgileriniGetir()
         {
+            
             foreach (var item in KisilerListesi)
             {
+                
                 Console.WriteLine("Kişi Bilgileri");
                 Console.WriteLine("Adı   : {0}", item.Ad);
                 Console.WriteLine("Soyad   : {0}", item.Soyad);
                 Console.WriteLine("Numara   : {0}", item.Numara);
             }
-            
-
+  
         }
 
 
@@ -46,30 +47,28 @@ namespace TelefonRehberi
 
                     KisiBilgileriniGetir();
                 }
-                else if (secenek==3)
+                else if (secenek == 3)
                 {
                     NumaraSil();
                 }
-                else if (secenek==4)
+                else if (secenek == 4)
                 {
                     Arama();
                 }
             }
-           
+      
         }
         public void NumaraKayıt()
         {
+            Kisiler Kisi = new Kisiler();
             Console.Write("Ad girin");
+            Kisi.Ad = Console.ReadLine();
+            Kisi.Soyad = Console.ReadLine();
+            Kisi.Numara = Console.ReadLine();
 
-            KisilerGetir.Ad = Console.ReadLine();
-            KisilerGetir.Soyad = Console.ReadLine();
-            KisilerGetir.Numara = Convert.ToInt32(Console.ReadLine());
-            
-            KisilerListesi.Add(KisilerGetir);
+            KisilerListesi.Add(Kisi);
             
             
-
-
         }
         public void NumaraSil()
         {
@@ -94,10 +93,12 @@ namespace TelefonRehberi
             string ara = Console.ReadLine();
             foreach (var item in KisilerListesi)
             {
-               
-                Console.WriteLine(item.Ad.Contains(ara));
+                if (item.Ad.Contains(ara))
+                {
+                    Console.WriteLine(item.Numara);
+                }
+                
             }
-            
 
         }
     }

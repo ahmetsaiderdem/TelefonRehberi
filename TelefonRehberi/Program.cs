@@ -10,7 +10,7 @@ namespace TelefonRehberi
 
             
             Islemler getirKisi = new Islemler();
-              getirKisi.Secenek();
+            getirKisi.Secenek();
                
             
             

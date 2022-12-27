@@ -10,13 +10,13 @@ namespace TelefonRehberi
     {
         private string ad;
         private string soyad;
-        private int numara;
+        private string numara;
         
       
         public string Ad { get => ad; set => ad = value; }
         public string Soyad { get => soyad; set => soyad = value; }
-        public int Numara { get => numara; set => numara = value; }
-        public Kisiler(string ad, string soyad, int numara)
+        public string Numara { get => numara; set => numara = value; }
+        public Kisiler(string ad, string soyad, string numara)
         {
             Ad = ad;
             Soyad = soyad;
